@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <style>
+        div {
+            height: 300px;
+            width: 400px;
+            padding: 20px;
+            background-color: blue;
+            /* display: none; */
+            position: relative;
+            border: 3px black solid;
+
+        }
+
+        .div1 {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div2"><span id="span2"></span><span id="span1">namasthe</span></div>
+    <!-- <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul> -->
+    <button id="btn-1">sumbit</button>
+    <div id="div 4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sapiente vitae nesciunt corporis iste
+        assumenda, molestias minus at dolorem quidem placeat eos provident fugiat ipsa est inventore sunt. Ullam itaque
+        debitis saepe? Vitae optio totam quibusdam porro necessitatibus pariatur beatae ipsum numquam culpa qui ab cum
+        tempore delectus animi molestiae quia voluptate hic autem libero ea repellendus, harum mollitia eligendi! Magnam
+        laudantium quaerat, ex iste alias eveniet voluptates voluptatem ducimus.</div>
+    <span id="3"></span>
+    <p>lorem10
+    </p>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+    <script>
+        $(document).ready(function () {
+            $("#btn-1").click(function () {
+                $("div").hide(3000)
+                $("div").show(1000)
+                $("div").toggle(1000)
+                $("div").fadeIn(3000)
+                $("div").fadeOut(3000)
+                $("div").fadeToggle(3000)
+                $("div").fadeTo(3000, 0.5)
+
+                $("div").slideUp(1000)
+                $("div").slideDown(1000)
+                $("div").slideToggle(1000)
+                $("div").animate(1000)
+            })
+            $("div").click(function () {
+                $(this).animate({
+                    // 'height':'500px',
+                    // 'width':'600px',
+                    'left': '500px',
+
+                }, 3000).delay(3000)
+                    .animate({
+                        'top': '400px'
+                    }, 3000).delay(3000)
+                    .animate({
+                        'left': '0px'
+                    }, 3000).delay(3000)
+                    .animate({
+                        'top': '0px'
+                    }, 3000)
+
+                $(this).css({
+                    'color': 'yellow',
+                    'font-size': '20px'
+
+                })
+                $(this).addClass('div1')
+                $(this).remove()
+                $('ul').empty()
+                console.log($(this).height())
+                console.log($(this).width())
+                console.log($(this).innerHeight())
+                console.log($(this).innerWidth())
+                console.log($(this).outerWidth())
+                console.log($(this).outerHeight())
+                console.log($("#span1").parent())
+                console.log($("#div2").children())
+                console.log($("#div2").siblings())
+                console.log($("div").last())
+                console.log($('div').first())
+                $("p").eq(2).css({
+                    'color': 'red'
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

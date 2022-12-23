@@ -1,0 +1,58 @@
+#program{
+    padding-left: 400px;
+    color: aliceblue;
+}
+#parent{
+     background-color: rgb(44, 4, 123);
+     height: 70px;
+}
+#image{
+    background-color: blueviolet;
+}
+#head{
+    
+    width: 80%;
+    font-size: larger;
+    margin-left: 150px;
+    margin-top: 40px;
+    color: red;
+}
+#hyy2{
+    
+    width: 40%;
+    font-size: xx-large;
+    margin-left: 150px;
+    margin-top: 10px;
+    color: white;
+}
+#hyy3{
+    
+    width: 40%;
+    font-size: x-large;
+    margin-left: 150px;
+    margin-top: 10px;
+    color: white;
+}
+#img{
+    margin-bottom: 200px;
+}
+#name{
+    height: 800px;
+    background-color:rgba(131, 237, 244, 0.911);
+}
+#name2{
+    height: 400px;
+    padding-bottom: 40px;
+    
+}
+.subheading1{
+
+}
+#heade{
+    
+    width: 80%;
+    font-size: larger;
+    margin-left: 150px;
+    margin-top: 40px;
+    color: red;
+}

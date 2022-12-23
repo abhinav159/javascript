@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .error{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+    <input type="text" placeholder="username" id="inp1"><br />
+    <b id="label1">
+        
+    </b><br />
+    <input type="text" placeholder="enter email" id="inp2"><br />
+    <b id="label2"></b><br />
+    <input type="password" placeholder="password" id="inp3"><br />
+    <b id="label3"></b><br />
+    <input type="password" placeholder="confirm password" id="inp4">
+    <b id="label4"></b>
+    <button onclick="return formvalidation()" type="submit">submit</button>
+</form>
+    <script>
+        function formvalidation(){
+            u_name = document.getElementById("inp1").value
+            e_mail = document.getElementById("inp2").value
+            pass = document.getElementById("inp3").value
+            C_pass = document.getElementById("inp4").value
+             validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+             status = 0
+
+            if(u_name==""){
+                document.getElementById("label1").innerHTML='Username Cant Be Null'
+                document.getElementById("label1").style.color='red'
+                status = 1
+            }
+            else{
+                document.getElementById("label1").innerHTML=""
+            }
+            if(e_mail.match(validRegex)){
+                document.getElementById("label2").innerHTML=""
+
+            }
+            else{
+                
+                document.getElementById('label2').innerHTML="incorrect email format"
+                document.getElementById("label2").style.color='red'
+                document.getElementById("inp2").focus()
+                document.getElementById("inp2").setAttribute('class',"error")
+                status = 1
+
+            }
+            if(pass.length<6){
+                document.getElementById('label3').innerHTML="password too short"
+                document.getElementById("label3").style.color='red'
+                status = 1
+            }
+            else{
+                document.getElementById("label3").innerHTML=""   
+            }
+            if(C_pass != pass){console.log(C_pass)
+                console.log(pass)
+                document.getElementById('label4').innerHTML="password must be same"
+                document.getElementById("label4").style.color='red'
+                status=1
+            }
+            else{
+                document.getElementById("label4").innerHTML=""  
+            }
+            if(status == 1){
+                return false
+            }
+        }
+    </script>
+</body>
+</html>
